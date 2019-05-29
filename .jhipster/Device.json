@@ -1,0 +1,41 @@
+{
+    "name": "Device",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "deviceAttribute",
+            "otherEntityRelationshipName": "device",
+            "relationshipName": "attributes"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "deviceType",
+            "otherEntityRelationshipName": "device",
+            "relationshipName": "type"
+        },
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "deviceGroup",
+            "otherEntityRelationshipName": "devices",
+            "relationshipName": "groups",
+            "otherEntityField": "id",
+            "ownerSide": false
+        }
+    ],
+    "changelogDate": "20190529231830",
+    "entityTableName": "device",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "jhipsterdeviceservice",
+    "applications": "*",
+    "microserviceName": "jhipsterdeviceservice"
+}

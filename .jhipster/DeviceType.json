@@ -1,0 +1,26 @@
+{
+    "name": "DeviceType",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "device",
+            "otherEntityRelationshipName": "type"
+        }
+    ],
+    "changelogDate": "20190529231833",
+    "entityTableName": "device_type",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "jhipsterdeviceservice",
+    "applications": "*",
+    "microserviceName": "jhipsterdeviceservice"
+}
