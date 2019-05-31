@@ -1,0 +1,29 @@
+{
+    "name": "DeviceGroup",
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityName": "device",
+            "otherEntityRelationshipName": "groups",
+            "relationshipName": "devices",
+            "otherEntityField": "id",
+            "ownerSide": true
+        }
+    ],
+    "changelogDate": "20190531140438",
+    "entityTableName": "device_group",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "clientRootFolder": "jhipsterdeviceservice",
+    "applications": "*",
+    "microserviceName": "jhipsterdeviceservice"
+}
