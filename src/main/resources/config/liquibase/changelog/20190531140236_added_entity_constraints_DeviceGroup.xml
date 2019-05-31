@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity DeviceGroup.
+    -->
+    <changeSet id="20190531140236-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="device_group_id"
+                                 baseTableName="device_group_devices"
+                                 constraintName="fk_device_group_devices_device_group_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="device_group"/>
+
+        <addForeignKeyConstraint baseColumnNames="devices_id"
+                                 baseTableName="device_group_devices"
+                                 constraintName="fk_device_group_devices_devices_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="device"/>
+        
+    </changeSet>
+</databaseChangeLog>
