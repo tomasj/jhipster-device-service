@@ -1,0 +1,37 @@
+entity Device {
+	name String
+}
+
+entity DeviceGroup {
+	name String
+}
+
+entity DeviceAttribute {
+	name String
+    type DeviceAttributeType
+    value String
+}
+
+enum DeviceAttributeType {
+    TEXT, NUMBER, OTHER
+}
+
+entity DeviceType {
+	name String
+}
+
+relationship OneToMany {
+	Device{attributes} to DeviceAttribute
+}
+
+relationship OneToOne {
+	DeviceType to Device{type}
+}
+
+relationship OneToOne {
+	Device{parent} to Device
+}
+
+relationship ManyToMany {
+	DeviceGroup{devices} to Device{groups}
+}
